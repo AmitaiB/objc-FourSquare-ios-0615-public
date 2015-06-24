@@ -11,7 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Expecta (~> 0.2.4)
-  - Foursquare-API-v2 (~> 1.4)
+  - Foursquare-API-v2 (~> 1.4.2)
   - KIF (~> 3.0)
   - OHHTTPStubs
   - Specta (from `git@github.com:specta/specta.git`)

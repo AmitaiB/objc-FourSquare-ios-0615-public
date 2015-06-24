@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <OHHTTPStubs/OHHTTPStubs.h>
+#import <Foursquare2.h>
 
 @implementation AppDelegate
 
@@ -30,7 +31,15 @@
         
     }
     // Override point for customization after application launch.
+    [Foursquare2 setupFoursquareWithClientId:@"4CYIWCSVTU40F1RGDRXIYS1ATQ4TQ2GGXWTRMNW5M3VYPCDW"
+                                      secret:@"ZYS0F3CJEFAQVXUWOYW5Y4VZYAT3IR0XLM5QZSW4NRZKVRQ4"
+                                 callbackURL:@"testapp123://foursquare"; // You can make this up for now. Use this string @"com.flatironschool"
+    
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [Foursquare2 handleURL:url];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
